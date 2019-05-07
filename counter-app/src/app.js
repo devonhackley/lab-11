@@ -6,33 +6,16 @@ class Counter extends React.Component{
 
     this.state ={
       count:0
-    }
-  }
-
-  handleIncrement = e => {
-    e.preventDefault();
-    console.log(e.target.id);
-    let count = this.state.count;
-    count++;
-    this.setState({ count })
-  }
-
-  handleDecrement = e => {
-    e.preventDefault();
-    let count = this.state.count;
-    count <= 0 ? 
-      count = 0  : 
-      count--;
-    this.setState({ count })
+    };
   }
   handleClick = e => {
     e.preventDefault();
     let count = this.state.count;
     e.target.id === 'add' ? count++ :
-      count <= 0 ? 
-        count = 0  : 
+      count <= 0 ?
+        count = 0 :
         count--;
-    this.setState({ count })
+    this.setState({ count });
   }
 
   render(){
@@ -49,9 +32,9 @@ class Counter extends React.Component{
 class App extends React.Component {
   render() {
     return (
-     <React.Fragment>
-       <Counter />
-     </React.Fragment>
+      <React.Fragment>
+        <Counter />
+      </React.Fragment>
     );
   }
 }

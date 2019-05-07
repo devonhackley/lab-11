@@ -25,6 +25,7 @@
     "no-trailing-spaces": "warn",
     "no-invalid-this": 0,
     "no-undefined": "off",
+    "no-unused-vars":"off",
     "quotes": ["warn", "single", {"allowTemplateLiterals": true}],
     "semi": "error"
   }
