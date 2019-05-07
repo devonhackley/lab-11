@@ -8,7 +8,7 @@ class Counter extends React.Component{
       count:0
     }
   }
-  
+
   handleIncrement = e => {
     e.preventDefault();
     console.log(e);
@@ -20,7 +20,9 @@ class Counter extends React.Component{
   handleDecrement = e => {
     e.preventDefault();
     let count = this.state.count;
-    count--;
+    count <= 0 ? 
+      count = 0  : 
+      count--;
     this.setState({ count })
   }
 
